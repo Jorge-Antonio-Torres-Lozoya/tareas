@@ -1,9 +1,11 @@
-const Header = ({titulo}) => {
+import Button from "./Button"
+const Header = ({ titulo, onAdd, mostrarForm }) => {
+
   return (
- <header>
-    <h1>{titulo}</h1>
- </header>
+    <header className="header">
+      <h1 style={{ color: "black" }}>{titulo}</h1>
+      <Button texto={mostrarForm ? "Cerrar" : "Agregar"} color={mostrarForm ? "gray" : "black"} onClick={onAdd} />
+    </header>
   )
 }
-
 export default Header
